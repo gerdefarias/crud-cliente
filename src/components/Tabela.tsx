@@ -14,10 +14,10 @@ export default function Tabela(props: TabelaProps) {
     function renderizarCabecalho(){
         return (
             <tr>
-                <th className="text-left p-4">Código</th>
-                <th className="text-left p-4">Nome</th>
-                <th className="text-left p-4">Idade</th>
-                {exibirAcoes ? <th className="p-4">Ações</th> : false}
+                <th className="text-center text-sm sm:p-4">Código</th>
+                <th className="text-center text-sm sm:p-4">Nome</th>
+                <th className="text-center text-sm sm:p-4">Idade</th>
+                {exibirAcoes ? <th className="sm:p-4">Ações</th> : false}
             </tr>
         )
     }
@@ -27,9 +27,9 @@ export default function Tabela(props: TabelaProps) {
             return (
                 <tr key={cliente.id}
                     className={i % 2 === 0 ? "bg-purple-200" : "bg-purple-100"}>
-                    <td className="text-left p-4">{cliente.id}</td>
-                    <td className="text-left p-4">{cliente.nome}</td>
-                    <td className="text-left p-4">{cliente.idade}</td>
+                    <td className="text-left text-gray-400 text-xs p-1 sm:p-4">{cliente.id}</td>
+                    <td className="text-left text-xs p-1 sm:p-4">{cliente.nome}</td>
+                    <td className="text-center text-xs p-1 sm:p-4">{cliente.idade}</td>
                     {exibirAcoes ? renderizarAcoes(cliente) : false}
                 </tr>
             )
@@ -42,7 +42,7 @@ export default function Tabela(props: TabelaProps) {
                 {props.clienteSelecionado? (
                     <button onClick={() => props.clienteSelecionado?.(cliente)} className={`
                         flex justify-center items-center
-                        text-green-600 rounded-full p-2 m-1
+                        text-green-600 rounded-full p-1 m-1
                         hover:bg-purple-50
                     `}>
                         {IconeEdicao}
@@ -52,7 +52,7 @@ export default function Tabela(props: TabelaProps) {
                 {props.clienteExcluido? (
                         <button onClick={() => props.clienteExcluido?.(cliente)}className={`
                         flex justify-center items-center
-                        text-red-500 rounded-full p-2 m-1
+                        text-red-500 rounded-full p-1 m-1
                         hover:bg-purple-50
                     `}>
                         {IconeLixo}
