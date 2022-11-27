@@ -19,7 +19,7 @@ export default function Formulario(props: FormularioProps) {
                 <Entrada 
                     somenteLeitura
                     texto="Código" 
-                    valor={id}
+                    valor={id.substring(0,10).toUpperCase()}
                     className="mb-5"
                 />
             ) : false}
