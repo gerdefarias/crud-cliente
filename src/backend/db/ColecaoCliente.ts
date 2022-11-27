@@ -16,7 +16,7 @@ export default class ColecaoCliente implements ClienteRepositorio {
   #conversor = {
     toFirestore: (cliente: Cliente) => {
       return {
-        nome: cliente.nome,
+        nome: (cliente.nome).toUpperCase(),
         idade: cliente.idade,
       }
     },

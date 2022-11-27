@@ -30,7 +30,7 @@ export default function Tabela(props: TabelaProps) {
                 return (
                     props.selected === "nome" ? +(a.nome > b.nome) || +(a.nome === b.nome) - 1 
                    :
-                    +(a.idade > b.idade) || +(a.idade === b.idade) - 1              
+                    +(a.idade > b.idade) || +(a.idade === b.idade) - 1   
                 )
         }); 
 

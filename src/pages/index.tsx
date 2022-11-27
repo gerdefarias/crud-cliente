@@ -24,7 +24,7 @@ export default function Home() {
       flex justify-center items-center h-screen
       bg-gradient-to-r from-zinc-800 to-gray-500
       `}>
-      <Layout titulo="Cadastro de Cliente">
+      <Layout titulo={tabelaVisivel ? "Lista de Clientes" : "Cadastro de Cliente" }>
         {tabelaVisivel ? (
         <>
           <div className="flex justify-between">
