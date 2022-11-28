@@ -9,7 +9,7 @@ export default function Layout(props: LayoutProps){
     return (
         <div className={`
             flex flex-col w-full sm:w-1/2
-            bg-gray-200 text-gray-800 rounded-md
+            bg-gray-300 text-gray-800 rounded-md
         `}>
 
             <Titulo>{props.titulo}</Titulo>

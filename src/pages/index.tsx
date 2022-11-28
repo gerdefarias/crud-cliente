@@ -21,7 +21,7 @@ export default function Home() {
 
   return (
     <div className={`
-      flex justify-center items-center h-screen
+      flex justify-center items-center ${tabelaVisivel ? "min-h-screen pt-10 pb-20" : "h-screen "}
       bg-gradient-to-r from-zinc-800 to-gray-500
       `}>
       <Layout titulo={tabelaVisivel ? "Lista de Clientes" : "Cadastro de Cliente" }>
@@ -40,7 +40,7 @@ export default function Home() {
               </select>
 
             </div>
-            <Botao className="mb-4"
+            <Botao className="mb-2 mr-2"
               onClick={novoCliente}>
               Novo Cliente</Botao>
           </div>
