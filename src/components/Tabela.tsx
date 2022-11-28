@@ -27,11 +27,18 @@ export default function Tabela(props: TabelaProps) {
     function renderizarDados(){
         // Ordenando o array mapeado contendo os dados resumidos
         props.clientes.sort(function(a, b) {
-                return (
-                    props.selected === "nome" ? +(a.nome > b.nome) || +(a.nome === b.nome) - 1 
-                   :
-                    +(a.idade > b.idade) || +(a.idade === b.idade) - 1   
-                )
+            if(props.selected === "codigo"){
+                return +((a.id).toLowerCase() > (b.id).toLowerCase()) || +((a.id).toLowerCase() === (b.id).toLowerCase()) - 1
+            } else if(props.selected === "nome"){
+                return +(a.nome > b.nome) || +(a.nome === b.nome) - 1 
+            } else {
+               return +(a.idade > b.idade) || +(a.idade === b.idade) - 1
+            }
+             // return (
+             //     props.selected === "nome" ? +(a.nome > b.nome) || +(a.nome === b.nome) - 1 
+             //    :
+             //     +(a.idade > b.idade) || +(a.idade === b.idade) - 1 
+             // )
         }); 
 
         return props.clientes?.map((cliente, i) => {
