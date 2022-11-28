@@ -7,7 +7,7 @@ import useClientes from "../hooks/useClientes";
 
 export default function Home() {
 
-  const [ select, setSelect ] = useState('nome');
+  const [ select, setSelect ] = useState('codigo');
 
   const { cliente, 
     clientes, 
